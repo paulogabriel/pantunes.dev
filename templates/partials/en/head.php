@@ -18,7 +18,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Paulo Gabriel Antunes",
+  "name": "Paulo Antunes",
+  "alternateName": "Paulo Gabriel Antunes",
   "jobTitle": "Senior Front-End Developer",
   "description": "<?= $anos_web ?> years building for the web. Specialist in web accessibility (WCAG 2.2 AA, ADA, Section 508) and enterprise front-end development.",
   "url": "https://pantunes.dev",

@@ -1,10 +1,10 @@
 # Paulo Antunes — Senior Front-End Developer
 
-> pantunes.dev is the professional portfolio of Paulo Gabriel Antunes, a senior front-end developer based in Porto Alegre, Brazil, with 20 years of experience building web products for organizations worldwide.
+> pantunes.dev is the professional portfolio of Paulo Antunes, a senior front-end developer based in Porto Alegre, Brazil, with 20 years of experience building web products for organizations worldwide.
 
 ## Identity
 
-- **Name:** Paulo Gabriel Antunes
+- **Name:** Paulo Antunes (full name: Paulo Gabriel Antunes)
 - **Role:** Senior Front-End Developer
 - **Location:** Porto Alegre, Brazil
 - **Email:** paulo84@gmail.com
