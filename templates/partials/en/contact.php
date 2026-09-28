@@ -43,6 +43,7 @@
             <textarea id="field-message" name="message"
               placeholder="What can I help you with?" required></textarea>
           </div>
+          <p class="form-legend mono"><span class="required-mark">*</span> required</p>
 
           <button type="submit" class="btn-submit">Send message →</button>
 

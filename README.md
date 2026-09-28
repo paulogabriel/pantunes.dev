@@ -8,6 +8,10 @@ Source of [pantunes.dev](https://pantunes.dev), the portfolio of Paulo Antunes, 
 - **Vercel Functions** (`api/*.js`): the contact form and an [MCP server](https://pantunes.dev/AGENTS.md) that lets AI assistants read the resume and send an intro.
 - **Agent-readable files:** `llms.txt`, `resume.json`, `AGENTS.md`.
 
+## Working on the code
+
+Read [DESIGN.md](DESIGN.md) first: tokens, components, accessibility rules and the checks every change must pass.
+
 ## Run locally
 
 Requires PHP 8.2+ and Node 18+.
