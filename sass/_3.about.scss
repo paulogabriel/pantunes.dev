@@ -1,0 +1,302 @@
+// ── About + What I do ──
+
+.about {
+  display: flex;
+  align-items: center;
+  background: var(--bg-about);
+  border-top: 1px solid var(--border);
+}
+
+.about-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--px);
+  padding-block: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+
+  @media screen and (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding-top: 64px;
+    padding-bottom: 30px;
+  }
+}
+
+// ── Bio ──
+
+.about-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+
+// Location + time zone: answers "where and when" before it's asked
+.about-meta {
+  margin: -10px 0 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: .06em;
+  color: var(--ink-muted);
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  .arrow {
+    font-size: 1.5em;
+  }
+
+  &.is-visible { opacity: 1; }
+}
+
+.about-time {
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
+
+.about-text {
+  font-size: clamp(14px, 1.65vw, 16.5px);
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-wrap: pretty;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .5s ease, transform .5s ease;
+
+  &.is-visible { opacity: 1; transform: translateY(0); }
+
+  a {
+    color: var(--cyan);
+    text-decoration: underline;
+    text-decoration-color: var(--cyan-2);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: var(--white);
+      text-decoration: none;
+    }
+  }
+}
+
+// ── Work history ──
+
+.exp-title {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 6px 0 16px;
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  &.is-visible { opacity: 1; }
+}
+
+// "What I do" spans the full row, below the bio and work history
+.about-skills { grid-column: 1 / -1; }
+
+.exp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  transition: opacity .5s ease .1s;
+
+  &.is-visible { opacity: 1; }
+}
+
+.exp-item {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child { border-bottom: none; }
+
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+
+.exp-period {
+  font-size: 12px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.exp-role {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.exp-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  border: 1px solid rgba(166,226,46,.35);
+  border-radius: 4px;
+  padding: 1px 7px;
+  letter-spacing: .04em;
+}
+
+.exp-func {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--orange);
+  opacity: .85;
+}
+
+// ── CTA ──
+
+.about-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(32px, 5vw, 56px);
+
+  .btn-cta {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .5s ease, transform .5s ease,
+                box-shadow .18s var(--ease-out);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// ── Skills ──
+
+.skills-title {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0 0 24px;
+  color: var(--ink);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .4s ease, transform .4s ease;
+
+  &.is-visible { opacity: 1; transform: translateY(0); }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+
+  @media screen and (max-width: 1100px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media screen and (max-width: 560px) { grid-template-columns: minmax(0, 1fr); }
+}
+
+.skill-card {
+  background: linear-gradient(150deg, color-mix(in srgb, var(--green) 5%, var(--bg-card)) 0%, var(--bg-card) 35%);
+  border: 1px solid color-mix(in srgb, var(--green) 18%, var(--border-2));
+  border-radius: 4px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 28px 22px 22px;
+  position: relative;
+  transform: translateY(10px);
+  transition: opacity .4s ease, transform .22s, border-color .22s, box-shadow .22s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--green);
+    border-radius: 4px 4px 0 0;
+  }
+
+  &::after {
+    content: attr(data-n);
+    position: absolute;
+    top: -8px; right: -4px;
+    font-family: var(--font-mono);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+    opacity: .025;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.is-visible:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--green) 50%, var(--border-2));
+    box-shadow: 0 24px 56px rgba(0,0,0,.45),
+                0 0 0 .5px color-mix(in srgb, var(--green) 50%, transparent),
+                0 0 48px color-mix(in srgb, var(--green) 16%, transparent);
+
+    .skill-name { color: var(--green); }
+    .skill-desc { color: var(--white); }
+    &::after { opacity: .05; }
+  }
+}
+
+.skill-num {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  line-height: 1;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  color: var(--ink);
+  transition: color .25s ease-out;
+}
+
+.skill-desc {
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  flex: 1;
+  transition: color .22s;
+}

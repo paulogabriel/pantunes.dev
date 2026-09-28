@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Paulo Gabriel Antunes",
+    "label": "Senior Front-End Developer",
+    "email": "paulo84@gmail.com",
+    "url": "https://pantunes.dev",
+    "summary": "20 years building and shipping web products for organizations around the world — most recently as a Senior Front-End Developer on enterprise platforms across government, nonprofit, and membership sectors. Hands-on specialty: web accessibility (WCAG 2.2 AA, ADA, Section 508).",
+    "location": {
+      "city": "Porto Alegre",
+      "region": "RS",
+      "countryCode": "BR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "paulogabriel",
+        "url": "https://www.linkedin.com/in/paulogabriel"
+      },
+      {
+        "network": "GitHub",
+        "username": "paulogabriel",
+        "url": "https://github.com/paulogabriel"
+      },
+      {
+        "network": "Behance",
+        "username": "paulogabriel",
+        "url": "https://behance.net/paulogabriel"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelancer",
+      "position": "Web developer (own clients)",
+      "startDate": "2006-01-01",
+      "summary": "Web development and digital strategy for my own clients, alongside agency and in-house roles. Contracts and invoices go through my Brazilian company."
+    },
+    {
+      "name": "Taoti Creative",
+      "position": "Senior Front-End Developer",
+      "url": "https://taoti.com",
+      "startDate": "2018-01-03",
+      "endDate": "2026-06-12",
+      "summary": "While at Taoti, worked on enterprise Drupal and WordPress sites for Taoti's clients, including The German Marshall Fund of the United States, International Women's Forum, APTA, and IAAPA. Led web accessibility auditing and remediation (WCAG 2.2 AA, ADA, Section 508). Integrated AI tools into daily front-end workflows via Figma MCP integration.",
+      "highlights": [
+        "Enterprise Drupal and WordPress development for government, nonprofit, and membership organizations",
+        "Web accessibility specialist: WCAG 2.2 AA, ADA, Section 508 auditing and remediation",
+        "Component-based front-end with HTML5, CSS3, JavaScript, Twig, Tailwind CSS",
+        "AI-assisted workflows: Figma MCP integration, AI-assisted debugging and QA",
+        "Authored build specifications and performed cross-team QA"
+      ]
+    },
+    {
+      "name": "Crossover",
+      "position": "Visual Design Engineer",
+      "url": "https://crossover.com",
+      "startDate": "2017-07-01",
+      "endDate": "2017-12-31",
+      "summary": "Contributed to Acquia client project. Owned SCSS / styling architecture for the Kitewheel MVP through to launch."
+    },
+    {
+      "name": "Printi",
+      "position": "UX/UI Designer & Front-End Developer",
+      "url": "https://printi.com.br",
+      "startDate": "2012-09-01",
+      "endDate": "2016-03-01",
+      "summary": "Early team member. Designed UX/UI for new features and translated layouts into front-end code during Printi's growth period (Best B2B Company by Brazil Founders, 2014 & 2015)."
+    },
+    {
+      "name": "Abduzeedo",
+      "position": "Writer",
+      "url": "https://abduzeedo.com",
+      "startDate": "2008-01-01",
+      "endDate": "2019-12-31",
+      "summary": "Contributed to one of the world's most recognized design blogs — inspiration pieces, ideas, and interviews for the global design community."
+    },
+    {
+      "name": "Zee Design",
+      "position": "Web Developer",
+      "url": "https://zee.com.br",
+      "startDate": "2006-01-01",
+      "endDate": "2012-08-31",
+      "summary": "Delivered full design solutions for a range of clients — UX/UI, responsive design, front-end development, wireframes, prototypes, and style guides."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Federal University of Rio Grande do Sul",
+      "area": "Social Communications — Publicity & Advertising",
+      "studyType": "B.A.",
+      "url": "https://ufrgs.br",
+      "endDate": "2012-12-31"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML + CSS",
+      "level": "Expert",
+      "keywords": ["HTML5", "CSS3", "SASS", "Tailwind CSS", "responsive design"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": ["ES6+", "jQuery", "Vanilla JS"]
+    },
+    {
+      "name": "Web Accessibility",
+      "level": "Expert",
+      "keywords": ["WCAG 2.2 AA", "ADA", "Section 508", "axe", "WAVE", "Lighthouse", "NVDA", "VoiceOver"]
+    },
+    {
+      "name": "CMS",
+      "level": "Expert",
+      "keywords": ["Drupal", "WordPress", "Twig"]
+    },
+    {
+      "name": "UX / UI Design",
+      "level": "Advanced",
+      "keywords": ["Figma", "Adobe XD", "wireframes", "style guides", "component-based design"]
+    },
+    {
+      "name": "Tooling",
+      "level": "Advanced",
+      "keywords": ["Git", "SVN", "Gulp", "PHP", "Lando", "Webpack"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Portuguese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "meta": {
+    "canonical": "https://pantunes.dev/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-09-23"
+  }
+}

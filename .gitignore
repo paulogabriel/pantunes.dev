@@ -1,0 +1,8 @@
+.agents
+.claude
+.DS_Store
+node_modules/
+skills-lock.json
+PRODUCT.md
+config/mail.php
+public/vendor/

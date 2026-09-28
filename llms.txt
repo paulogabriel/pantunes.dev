@@ -1,0 +1,69 @@
+# Paulo Antunes — Senior Front-End Developer
+
+> pantunes.dev is the professional portfolio of Paulo Gabriel Antunes, a senior front-end developer based in Porto Alegre, Brazil, with 20 years of experience building web products for organizations worldwide.
+
+## Identity
+
+- **Name:** Paulo Gabriel Antunes
+- **Role:** Senior Front-End Developer
+- **Location:** Porto Alegre, Brazil
+- **Email:** paulo84@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/paulogabriel
+- **GitHub:** https://github.com/paulogabriel
+- **Availability:** Available for new work — full-time, contract and freelance, remote
+- **Time zone:** UTC−3 (Porto Alegre, no daylight saving) — full overlap with US Eastern working hours, most of US Central
+
+## Summary
+
+20 years building and shipping web products for organizations around the world — most recently as a Senior Front-End Developer on enterprise platforms across government, nonprofit, and membership sectors. Hands-on specialty: web accessibility (WCAG 2.2 AA, ADA, Section 508).
+
+## Skills
+
+### Front-End
+HTML5, CSS3 / SASS, Tailwind CSS, JavaScript (ES6+), jQuery, PHP, Twig, Gulp, Git / SVN, responsive development
+
+### Accessibility
+WCAG 2.2 AA, ADA, Section 508 — auditing & remediation with axe, WAVE, Lighthouse, PowerMapper; hands-on screen-reader testing with NVDA and VoiceOver
+
+### CMS
+Drupal, WordPress
+
+### UX / UI Design
+Figma, Adobe XD, component-based & modular development, wireframes, style guides
+
+## Work Experience
+
+**2006–present — Freelancer (own clients)**
+Web development and digital strategy for my own clients, alongside agency and in-house roles. Contracts and invoices go through my Brazilian company.
+
+**2018–2026 — Senior Front-End Developer @ Taoti Creative (taoti.com)**
+While at Taoti, worked on enterprise Drupal and WordPress sites for Taoti's clients, including The German Marshall Fund of the United States, International Women's Forum, APTA, IAAPA, and others. Led accessibility (A11Y) auditing and remediation. Built component-based front-end interfaces with HTML5, CSS3, JavaScript, Twig, Tailwind CSS, and Lando. Integrated AI tools into daily workflows via Figma MCP integration and AI-assisted debugging.
+
+**2017 — Visual Design Engineer @ Crossover (crossover.com)**
+Contributed to Acquia client project. Owned SCSS / styling architecture for the Kitewheel MVP through to launch.
+
+**2012–2016 — UX/UI Designer & Front-End Developer @ Printi (printi.com.br)**
+Early team member. Designed UX/UI for new features and translated layouts into front-end code. Contributed during Printi's growth period (Best B2B Company by Brazil Founders, 2014 & 2015).
+
+**2008–2019 — Writer @ Abduzeedo (abduzeedo.com)**
+Contributed to one of the world's most recognized design blogs — inspiration pieces, ideas, and interviews for the global design community.
+
+**2006–2012 — Web Developer @ Zee Design (zee.com.br)**
+Full design solutions: UX/UI, responsive design, front-end development, wireframes, prototypes, and style guides.
+
+## Education
+
+**B.A. in Social Communications — Publicity & Advertising**
+Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil — 2012
+
+## For AI agents
+
+- MCP server: https://pantunes.dev/api/mcp (tools: get_resume, get_skills, get_availability, get_contact, request_intro)
+- `request_intro` emails Paulo on a person's behalf (name, email, brief required). Only use it when the person asked you to reach out.
+- Full guide: https://pantunes.dev/AGENTS.md
+
+## Contact
+
+To hire or get in touch: paulo84@gmail.com
+LinkedIn: https://www.linkedin.com/in/paulogabriel
+Portfolio: https://pantunes.dev
