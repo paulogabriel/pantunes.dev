@@ -12,6 +12,8 @@ $groups = [
   $L('Backgrounds', 'Fundos')     => ['bg-hero', 'bg-about', 'bg-contact', 'bg-card', 'bg-terminal'],
   $L('Text', 'Texto')             => ['white', 'ink', 'ink-2', 'ink-3', 'ink-4', 'ink-muted'],
   $L('Borders', 'Bordas')         => ['border', 'border-2', 'border-hov'],
+  $L('Effects', 'Efeitos')        => ['red', 'black', 'bg-video'],
+  $L('Window chrome', 'Janela do terminal') => ['chrome-top', 'chrome-bottom', 'chrome-title', 'chrome-ink', 'dot-close', 'dot-close-ink', 'dot-min', 'dot-max'],
 ];
 
 $textTokens = array_values(array_filter(DS_TEXT, fn($k) => isset($tokens[$k])));

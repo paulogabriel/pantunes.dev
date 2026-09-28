@@ -27,6 +27,21 @@
   --cyan:       #66d9ef;
   --orange:     #fd971f;
   --pink:       #ff6b9d;  // lightened from Monokai #f92672 to pass AA as text
+  --red:        #f92672;  // original Monokai pink: error rings and borders only, never text
+  --black:      #000;     // shadows, overlays and masks, mixed with transparent
+
+  // Hero
+  --bg-video:   #020205;  // behind the hero video while it loads
+
+  // Window chrome (terminal and message field)
+  --chrome-top:    #3a3833;
+  --chrome-bottom: #322f2a;
+  --chrome-title:  #b9b6a8;
+  --chrome-ink:    #d7d6cb;  // text inside terminal-style fields
+  --dot-close:     #ff5f57;
+  --dot-close-ink: #511a17;
+  --dot-min:       #febc2e;
+  --dot-max:       #28c840;
 
   // Borders
   --border:     #3a3b32;

@@ -160,7 +160,7 @@
   font-size: 11px;
   font-weight: 600;
   color: var(--green);
-  border: 1px solid rgba(166,226,46,.35);
+  border: 1px solid color-mix(in srgb, var(--green) 35%, transparent);
   border-radius: 4px;
   padding: 1px 7px;
   letter-spacing: .04em;
@@ -265,7 +265,7 @@
   &.is-visible:hover {
     transform: translateY(-5px);
     border-color: color-mix(in srgb, var(--green) 50%, var(--border-2));
-    box-shadow: 0 24px 56px rgba(0,0,0,.45),
+    box-shadow: 0 24px 56px color-mix(in srgb, var(--black) 45%, transparent),
                 0 0 0 .5px color-mix(in srgb, var(--green) 50%, transparent),
                 0 0 48px color-mix(in srgb, var(--green) 16%, transparent);
 

@@ -96,7 +96,7 @@
   max-width: 1520px;
   margin: 0 auto;
   overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, var(--black) 6%, var(--black) 94%, transparent);
 
   &:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
 

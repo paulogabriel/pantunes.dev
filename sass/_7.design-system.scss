@@ -252,7 +252,7 @@
   .ds-matrix & {
     padding: 1px 5px;
     border-radius: 3px;
-    background: rgba(0,0,0,.35);
+    background: color-mix(in srgb, var(--black) 35%, transparent);
     color: var(--ink);
   }
 }
