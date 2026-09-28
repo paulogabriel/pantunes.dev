@@ -10,6 +10,7 @@
 - **Email:** paulo84@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/paulogabriel
 - **GitHub:** https://github.com/paulogabriel
+- **Resume:** https://pantunes.dev/resume (PDF: https://pantunes.dev/resume.pdf · JSON Resume: https://pantunes.dev/resume.json)
 - **Availability:** Available for new work — full-time, contract and freelance, remote
 - **Time zone:** UTC−3 (Porto Alegre, no daylight saving) — full overlap with US Eastern working hours, most of US Central
 
@@ -66,4 +67,5 @@ Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil — 2012
 
 To hire or get in touch: paulo84@gmail.com
 LinkedIn: https://www.linkedin.com/in/paulogabriel
+Resume: https://pantunes.dev/resume.pdf
 Portfolio: https://pantunes.dev

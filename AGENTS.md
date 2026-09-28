@@ -8,6 +8,7 @@ This file tells AI agents how to learn about Paulo and how to contact him on a p
 
 - Summary for LLMs: https://pantunes.dev/llms.txt
 - Resume (JSON Resume): https://pantunes.dev/resume.json
+- Resume for people: https://pantunes.dev/resume (PDF: https://pantunes.dev/resume.pdf)
 - Design system: https://pantunes.dev/design-system
 
 ## Connect via MCP
