@@ -47,6 +47,10 @@ foreach (['en' => '/design-system', 'pt' => '/pt/design-system'] as $lang => $di
     echo "✓ public$dir/index.html\n";
 }
 
+mkdir_p($outDir . '/resume');
+file_put_contents($outDir . '/resume/index.html', render($root . '/templates/resume.php'));
+echo "✓ public/resume/index.html\n";
+
 file_put_contents($outDir . '/404.html', render($root . '/templates/404.php'));
 echo "✓ public/404.html\n";
 
@@ -58,7 +62,7 @@ foreach ($assets as $dir) {
     echo "✓ public/$dir/\n";
 }
 
-$files = ['favicon.ico', 'site.webmanifest', 'llms.txt', 'resume.json', 'AGENTS.md'];
+$files = ['favicon.ico', 'site.webmanifest', 'llms.txt', 'resume.json', 'resume.pdf', 'AGENTS.md'];
 foreach ($files as $file) {
     if (file_exists("$root/$file")) {
         copy("$root/$file", "$outDir/$file");

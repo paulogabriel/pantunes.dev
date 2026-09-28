@@ -33,11 +33,13 @@
     "build": "npx sass sass/main.scss dist/main.css --style=compressed && npx webpack --config webpack.config.js && php scripts/build-html.php",
     "format": "run-p format:*",
     "format:js": "npx prettier --write js/",
-    "format:sass": "npx prettier --write sass/"
+    "format:sass": "npx prettier --write sass/",
+    "resume": "node scripts/build-resume.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^6.1.2",
+    "playwright-core": "^1.59.1",
     "sass": "^1.87.0"
   }
 }
