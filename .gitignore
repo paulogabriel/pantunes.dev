@@ -5,4 +5,5 @@ node_modules/
 skills-lock.json
 PRODUCT.md
 config/mail.php
-public/vendor/
+public/
+vendor/
