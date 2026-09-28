@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   z-index: 500;
-  background: rgba(27,26,23,.85);
+  background: color-mix(in srgb, var(--bg-terminal) 85%, transparent);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
       width: 320px;
       transform: translateY(0) scale(1);
       border-radius: 8px 8px 0 0;
-      box-shadow: 0 -4px 24px rgba(0,0,0,.5);
+      box-shadow: 0 -4px 24px color-mix(in srgb, var(--black) 50%, transparent);
     }
 
     .sh-body,
@@ -44,7 +44,7 @@
   border: 1px solid var(--border-2);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 32px 80px rgba(0,0,0,.7), 0 0 0 .5px rgba(166,226,46,.1);
+  box-shadow: 0 32px 80px color-mix(in srgb, var(--black) 70%, transparent), 0 0 0 .5px color-mix(in srgb, var(--green) 10%, transparent);
   transform: translateY(16px) scale(.97);
   transition: transform .22s;
 
@@ -58,8 +58,8 @@
   align-items: center;
   gap: 7px;
   padding: 10px 14px;
-  background: linear-gradient(#3a3833, #322f2a);
-  border-bottom: 1px solid #000;
+  background: linear-gradient(var(--chrome-top), var(--chrome-bottom));
+  border-bottom: 1px solid var(--black);
 }
 
 .sh-btn {
@@ -81,25 +81,25 @@
     font-size: 8px;
     font-weight: 800;
     line-height: 1;
-    color: rgba(0,0,0,0);
+    color: transparent;
     transition: color .12s;
   }
 
-  &--close { background: #ff5f57; &::after { content: '×'; } }
-  &--min   { background: #febc2e; &::after { content: '−'; } }
-  &--max   { background: #28c840; &::after { content: '⊕'; } }
+  &--close { background: var(--dot-close); &::after { content: '×'; } }
+  &--min   { background: var(--dot-min); &::after { content: '−'; } }
+  &--max   { background: var(--dot-max); &::after { content: '⊕'; } }
 
   &:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 50%; }
 }
 
-.sh-bar:hover .sh-btn::after { color: rgba(0,0,0,.55); }
+.sh-bar:hover .sh-btn::after { color: color-mix(in srgb, var(--black) 55%, transparent); }
 
 .sh-title {
   flex: 1;
   text-align: center;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: #b9b6a8;
+  color: var(--chrome-title);
   letter-spacing: .04em;
 }
 

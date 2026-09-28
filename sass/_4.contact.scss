@@ -110,7 +110,7 @@
 
   &[aria-invalid='true'] {
     border-color: var(--pink);
-    box-shadow: 0 0 0 3px rgba(249,38,114,.45);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--red) 45%, transparent);
   }
 }
 
@@ -160,9 +160,9 @@
 .terminal-window {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   border-bottom: none;
-  box-shadow: 0 12px 34px rgba(0,0,0,.4);
+  box-shadow: 0 12px 34px color-mix(in srgb, var(--black) 40%, transparent);
 }
 
 .terminal-bar {
@@ -170,8 +170,8 @@
   display: flex;
   align-items: center;
   padding: 9px 13px;
-  background: linear-gradient(#3a3833, #322f2a);
-  border-bottom: 1px solid #000;
+  background: linear-gradient(var(--chrome-top), var(--chrome-bottom));
+  border-bottom: 1px solid var(--black);
 }
 
 .terminal-dots {
@@ -188,7 +188,7 @@
   position: relative;
 
   &--red    {
-    background: #ff5f57;
+    background: var(--dot-close);
 
     &::before {
       content: '';
@@ -199,11 +199,11 @@
       width: 4px;
       height: 4px;
       border-radius: 100%;
-      background: #511a17;
+      background: var(--dot-close-ink);
     }
   }
-  &--yellow { background: #febc2e; }
-  &--green  { background: #28c840; }
+  &--yellow { background: var(--dot-min); }
+  &--green  { background: var(--dot-max); }
 }
 
 .terminal-title {
@@ -211,7 +211,7 @@
   left: 0; right: 0;
   text-align: center;
   font-size: 11px;
-  color: #b9b6a8;
+  color: var(--chrome-title);
   pointer-events: none;
 }
 
@@ -221,30 +221,30 @@
   margin-top: -8px;
   min-height: 118px;
   background: var(--bg-terminal);
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   border-top: none;
   border-radius: 0 0 10px 10px;
   padding: 15px 17px;
   font-size: 13px;
   line-height: 1.75;
-  color: #d7d6cb;
+  color: var(--chrome-ink);
   outline: none;
   resize: vertical;
   transition: border-color .2s;
 
   &::placeholder { color: var(--ink-muted); }
-  &:focus-visible { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(102,217,239,.45); }
+  &:focus-visible { border-color: var(--cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 45%, transparent); }
 
   &[aria-invalid='true'] {
     border-color: var(--pink);
-    box-shadow: 0 0 0 3px rgba(249,38,114,.45);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--red) 45%, transparent);
   }
 }
 
 // When the terminal has focus, highlight its chrome too
 .terminal-body:focus ~ .terminal-window .terminal-bar,
 .form-group:focus-within .terminal-window {
-  box-shadow: 0 0 0 3px rgba(102,217,239,.12);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 12%, transparent);
 }
 
 // ── Field errors ──
@@ -260,8 +260,8 @@
   font-size: 1rem;
   line-height: 1.6;
   color: var(--green);
-  background: rgba(166,226,46,.08);
-  border: 1px solid rgba(166,226,46,.25);
+  background: color-mix(in srgb, var(--green) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
   border-radius: 9px;
   padding: 24px;
 }
@@ -269,8 +269,8 @@
 .form-error {
   font-size: 0.875rem;
   color: var(--pink);
-  background: rgba(249,38,114,.06);
-  border: 1px solid rgba(249,38,114,.2);
+  background: color-mix(in srgb, var(--red) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--red) 20%, transparent);
   border-radius: 7px;
   padding: 10px 14px;
 }

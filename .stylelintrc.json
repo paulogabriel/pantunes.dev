@@ -1,0 +1,14 @@
+{
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "color-no-hex": [true, { "message": "Use a token from sass/_0.tokens.scss instead of a hex color." }],
+    "color-named": ["never", { "message": "Use a token from sass/_0.tokens.scss instead of a named color." }],
+    "function-disallowed-list": [["rgb", "rgba", "hsl", "hsla", "hwb", "lab", "lch", "oklab", "oklch"], { "message": "Use a token, or color-mix() with a token for transparency." }]
+  },
+  "overrides": [
+    {
+      "files": ["sass/_0.tokens.scss"],
+      "rules": { "color-no-hex": null, "color-named": null, "function-disallowed-list": null }
+    }
+  ]
+}

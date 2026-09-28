@@ -30,16 +30,19 @@
     "extends browserslist-config-google"
   ],
   "scripts": {
-    "build": "npx sass sass/main.scss dist/main.css --style=compressed && npx webpack --config webpack.config.js && php scripts/build-html.php",
+    "build": "npm run lint:css && npx sass sass/main.scss dist/main.css --style=compressed && npx webpack --config webpack.config.js && php scripts/build-html.php",
     "format": "run-p format:*",
     "format:js": "npx prettier --write js/",
     "format:sass": "npx prettier --write sass/",
-    "resume": "node scripts/build-resume.js"
+    "resume": "node scripts/build-resume.js",
+    "lint:css": "stylelint \"sass/**/*.scss\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^6.1.2",
     "playwright-core": "^1.59.1",
-    "sass": "^1.87.0"
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.87.0",
+    "stylelint": "^17.15.0"
   }
 }
