@@ -1,11 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Paulo Gabriel Antunes",
-    "label": "Senior Front-End Developer",
+    "name": "Paulo Antunes",
+    "label": "Senior Front-End Developer · Web Accessibility",
     "email": "paulo84@gmail.com",
     "url": "https://pantunes.dev",
-    "summary": "20 years building and shipping web products for organizations around the world — most recently as a Senior Front-End Developer on enterprise platforms across government, nonprofit, and membership sectors. Hands-on specialty: web accessibility (WCAG 2.2 AA, ADA, Section 508).",
+    "summary": "20 years building and shipping web products for organizations around the world — most recently as a Senior Front-End Developer on enterprise platforms across government, nonprofit, and membership sectors. What I bring to a team isn't just code: it's years of translating what stakeholders actually need into something a team can build and ship. Hands-on specialty: web accessibility (WCAG 2.2 AA, ADA, Section 508).",
     "location": {
       "city": "Porto Alegre",
       "region": "RS",
@@ -31,10 +31,14 @@
   },
   "work": [
     {
-      "name": "Freelancer",
-      "position": "Web developer (own clients)",
+      "name": "Freelance",
+      "position": "Front-End Developer (own clients)",
       "startDate": "2006-01-01",
-      "summary": "Web development and digital strategy for my own clients, alongside agency and in-house roles. Contracts and invoices go through my Brazilian company."
+      "summary": "Web development and digital strategy for my own clients, alongside agency and in-house roles. Contracts and invoices go through my Brazilian company.",
+      "highlights": [
+        "Direct clients in Brazil and abroad, from concept to deploy: UX/UI, front-end and CMS builds"
+      ],
+      "location": "Remote"
     },
     {
       "name": "Taoti Creative",
@@ -44,12 +48,14 @@
       "endDate": "2026-06-12",
       "summary": "While at Taoti, worked on enterprise Drupal and WordPress sites for Taoti's clients, including The German Marshall Fund of the United States, International Women's Forum, APTA, and IAAPA. Led web accessibility auditing and remediation (WCAG 2.2 AA, ADA, Section 508). Integrated AI tools into daily front-end workflows via Figma MCP integration.",
       "highlights": [
-        "Enterprise Drupal and WordPress development for government, nonprofit, and membership organizations",
-        "Web accessibility specialist: WCAG 2.2 AA, ADA, Section 508 auditing and remediation",
-        "Component-based front-end with HTML5, CSS3, JavaScript, Twig, Tailwind CSS",
-        "AI-assisted workflows: Figma MCP integration, AI-assisted debugging and QA",
-        "Authored build specifications and performed cross-team QA"
-      ]
+        "Front-end developer on multiple enterprise Drupal and WordPress builds for high-profile clients, including The German Marshall Fund of the United States, International Women's Forum, APTA and IAAPA.",
+        "Specialized in web accessibility auditing and remediation, helping clients meet WCAG 2.2 AA, ADA and Section 508 so their sites work for everyone, including people who rely on assistive technologies.",
+        "Built responsive, component-based interfaces with HTML5, CSS3 and JavaScript, Twig templates, Tailwind CSS, Lando environments and Git — maintaining long-term client sites through modular, maintainable code.",
+        "Integrated AI tools into daily front-end work: migrated legacy ACF field groups to native Gutenberg blocks, turned Figma specs into code through Figma's MCP integration, reused existing component patterns, debugged complex issues and extended search filtering.",
+        "Authored build specifications that scoped the technical approach for new projects and guided estimation.",
+        "Performed QA across the team's work: verified completed tasks, validated client sites after security updates and checked builds against requirements before release."
+      ],
+      "location": "Remote"
     },
     {
       "name": "Crossover",
@@ -57,7 +63,12 @@
       "url": "https://crossover.com",
       "startDate": "2017-07-01",
       "endDate": "2017-12-31",
-      "summary": "Contributed to Acquia client project. Owned SCSS / styling architecture for the Kitewheel MVP through to launch."
+      "summary": "Contributed to Acquia client project. Owned SCSS / styling architecture for the Kitewheel MVP through to launch.",
+      "location": "Remote",
+      "highlights": [
+        "Contributed to a client project for Acquia, the company behind Drupal, as part of Crossover's global talent network.",
+        "Owned the SCSS / styling architecture for the Kitewheel MVP, taking it through to launch."
+      ]
     },
     {
       "name": "Printi",
@@ -65,7 +76,13 @@
       "url": "https://printi.com.br",
       "startDate": "2012-09-01",
       "endDate": "2016-03-01",
-      "summary": "Early team member. Designed UX/UI for new features and translated layouts into front-end code during Printi's growth period (Best B2B Company by Brazil Founders, 2014 & 2015)."
+      "summary": "Early team member. Designed UX/UI for new features and translated layouts into front-end code during Printi's growth period (Best B2B Company by Brazil Founders, 2014 & 2015).",
+      "location": "Remote",
+      "highlights": [
+        "Early team member, working directly with product management to design and ship new pages and services.",
+        "Designed UX/UI for new features and built them as front-end pages for the back-end team to integrate.",
+        "Contributed during a period of rapid growth in which Printi was named Best B2B Company by Brazil Founders (2014 and 2015)."
+      ]
     },
     {
       "name": "Abduzeedo",
@@ -73,7 +90,11 @@
       "url": "https://abduzeedo.com",
       "startDate": "2008-01-01",
       "endDate": "2019-12-31",
-      "summary": "Contributed to one of the world's most recognized design blogs — inspiration pieces, ideas, and interviews for the global design community."
+      "summary": "Contributed to one of the world's most recognized design blogs — inspiration pieces, ideas, and interviews for the global design community.",
+      "location": "Remote",
+      "highlights": [
+        "Wrote for one of the world's most recognized design blogs, online since 2007: inspiration pieces, ideas and interviews for the global design community."
+      ]
     },
     {
       "name": "Zee Design",
@@ -81,7 +102,12 @@
       "url": "https://zee.com.br",
       "startDate": "2006-01-01",
       "endDate": "2012-08-31",
-      "summary": "Delivered full design solutions for a range of clients — UX/UI, responsive design, front-end development, wireframes, prototypes, and style guides."
+      "summary": "Delivered full design solutions for a range of clients — UX/UI, responsive design, front-end development, wireframes, prototypes, and style guides.",
+      "location": "Porto Alegre, Brazil",
+      "highlights": [
+        "Delivered full design solutions for a range of clients, from UX/UI and responsive design through front-end development.",
+        "Translated design concepts into responsive implementations; produced wireframes, prototypes and style guides."
+      ]
     }
   ],
   "education": [
@@ -97,32 +123,69 @@
     {
       "name": "HTML + CSS",
       "level": "Expert",
-      "keywords": ["HTML5", "CSS3", "SASS", "Tailwind CSS", "responsive design"]
+      "keywords": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "Tailwind CSS",
+        "responsive design"
+      ]
     },
     {
       "name": "JavaScript",
       "level": "Advanced",
-      "keywords": ["ES6+", "jQuery", "Vanilla JS"]
+      "keywords": [
+        "ES6+",
+        "jQuery",
+        "Vanilla JS"
+      ]
     },
     {
       "name": "Web Accessibility",
       "level": "Expert",
-      "keywords": ["WCAG 2.2 AA", "ADA", "Section 508", "axe", "WAVE", "Lighthouse", "NVDA", "VoiceOver"]
+      "keywords": [
+        "WCAG 2.2 AA",
+        "ADA",
+        "Section 508",
+        "axe",
+        "WAVE",
+        "PowerMapper",
+        "Lighthouse",
+        "NVDA",
+        "VoiceOver"
+      ]
     },
     {
       "name": "CMS",
       "level": "Expert",
-      "keywords": ["Drupal", "WordPress", "Twig"]
+      "keywords": [
+        "Drupal",
+        "WordPress",
+        "Twig"
+      ]
     },
     {
       "name": "UX / UI Design",
       "level": "Advanced",
-      "keywords": ["Figma", "Adobe XD", "wireframes", "style guides", "component-based design"]
+      "keywords": [
+        "Figma",
+        "Adobe XD",
+        "wireframes",
+        "style guides",
+        "component-based design"
+      ]
     },
     {
       "name": "Tooling",
       "level": "Advanced",
-      "keywords": ["Git", "SVN", "Gulp", "PHP", "Lando", "Webpack"]
+      "keywords": [
+        "Git",
+        "SVN",
+        "Gulp",
+        "PHP",
+        "Lando",
+        "Webpack"
+      ]
     }
   ],
   "languages": [
@@ -138,6 +201,6 @@
   "meta": {
     "canonical": "https://pantunes.dev/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-09-23"
+    "lastModified": "2026-09-28"
   }
 }

@@ -16,6 +16,11 @@ if (preg_match('#^/(pt/)?design-system/?$#', $path, $ds)) {
     exit;
 }
 
+if (preg_match('#^/resume/?$#', $path)) {
+    require __DIR__ . '/templates/resume.php';
+    exit;
+}
+
 // clean URL: /portugues → portugues.php
 if ($path === '/pt' || $path === '/pt/') {
     require __DIR__ . '/pt/index.php';
