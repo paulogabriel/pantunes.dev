@@ -89,6 +89,14 @@
   color: var(--pink);
 }
 
+// Explains the * once, right below the last field (WCAG 3.3.2)
+.form-legend {
+  margin-top: -8px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--ink-muted);
+}
+
 // Text fields
 .form-group input,
 .form-group textarea {

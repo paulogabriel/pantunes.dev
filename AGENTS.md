@@ -64,4 +64,6 @@ Only call `request_intro` when the person asked you to reach out, and only with 
 
 Required: `name`, `email`, `brief` (20+ characters). Requests are rate-limited.
 
+Working on this site's code instead? Read [DESIGN.md](https://github.com/paulogabriel/pantunes.dev/blob/main/DESIGN.md).
+
 No MCP client? Email paulo84@gmail.com, or use the contact form at https://pantunes.dev/#sec-contact.
