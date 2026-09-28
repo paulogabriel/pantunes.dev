@@ -388,7 +388,7 @@ $toc = [
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <p class="contact-footer mono is-visible">© <?= date('Y') ?> paulo antunes</p>
+    <p class="contact-footer mono is-visible">© <?= date('Y') ?> paulo antunes · <?php if ($pt): ?><a href="/resume" hreflang="en">currículo (em inglês)</a><?php else: ?><a href="/resume">resume</a><?php endif; ?></p>
   </div>
 </footer>
 
