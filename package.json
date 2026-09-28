@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio of Paulo Antunes — static PHP templates, Vercel Functions and an MCP server",
   "author": "Paulo Antunes",
+  "homepage": "https://pantunes.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/paulogabriel/pantunes.dev"
