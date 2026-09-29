@@ -10,7 +10,7 @@ $period = function (array $w) use ($year) {
   return $from === $to ? $from : "{$from}–{$to}";
 };
 $bare = fn($url) => preg_replace('#^https?://(www\.)?#', '', rtrim($url, '/'));
-$profiles = array_filter($b['profiles'] ?? [], fn($p) => in_array($p['network'], ['LinkedIn', 'GitHub'], true));
+$profiles = array_filter($b['profiles'] ?? [], fn($p) => in_array($p['network'], ['LinkedIn', 'GitHub', 'Behance'], true));
 ?>
 <!DOCTYPE html>
 <html lang="en">
