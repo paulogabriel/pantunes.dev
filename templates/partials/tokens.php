@@ -17,7 +17,7 @@ function ds_tokens(): array {
   static $tokens = null;
   if ($tokens !== null) return $tokens;
   $scss = file_get_contents(__DIR__ . '/../../sass/_0.tokens.scss');
-  preg_match_all('/--([a-z0-9-]+):\s*(#[0-9a-fA-F]{3,6})\s*;\s*(?:\/\/\s*(.*))?/', $scss, $m, PREG_SET_ORDER);
+  preg_match_all('/--([a-z0-9-]+):\s*(#[0-9a-fA-F]{3,6})\s*;[ \t]*(?:\/\/[ \t]*(.*))?/', $scss, $m, PREG_SET_ORDER);
   $tokens = [];
   foreach ($m as $row) $tokens[$row[1]] = ['hex' => strtolower($row[2]), 'note' => trim($row[3] ?? '')];
   return $tokens;

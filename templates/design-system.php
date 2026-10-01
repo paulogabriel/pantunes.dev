@@ -16,6 +16,18 @@ $groups = [
   $L('Window chrome', 'Janela do terminal') => ['chrome-top', 'chrome-bottom', 'chrome-title', 'chrome-ink', 'dot-close', 'dot-close-ink', 'dot-min', 'dot-max'],
 ];
 
+// Token notes come from the SCSS comments (English); these are the Portuguese versions
+$notesPt = [
+  'accent'      => 'texto, cursor, seleção',
+  'accent-btn'  => 'botão principal (CTA) — ciano Monokai',
+  'ink-muted'   => 'passa AA (4,7:1+) até sobre o degradê mais claro dos cards',
+  'pink'        => 'clareado a partir do Monokai #f92672 para passar AA como texto',
+  'red'         => 'rosa original do Monokai: só anéis e bordas de erro, nunca texto',
+  'black'       => 'sombras, sobreposições e máscaras, misturado com transparência',
+  'bg-video'    => 'atrás do vídeo do topo enquanto ele carrega',
+  'chrome-ink'  => 'texto dentro dos campos com cara de terminal',
+];
+
 $textTokens = array_values(array_filter(DS_TEXT, fn($k) => isset($tokens[$k])));
 $bgTokens   = array_values(array_filter(DS_BG, fn($k) => isset($tokens[$k])));
 
@@ -107,7 +119,7 @@ $toc = [
           <span class="ds-chip" style="background: var(--<?= $k ?>)"></span>
           <code class="mono">--<?= $k ?></code>
           <span class="ds-hex mono"><?= $tk['hex'] ?></span>
-          <?php if ($pt && $tk['note']): ?><span class="ds-swatch-note hg"><?= $e($tk['note']) ?></span><?php endif; ?>
+          <?php $note = $pt ? ($notesPt[$k] ?? '') : $tk['note']; if ($note): ?><span class="ds-swatch-note hg"><?= $e($note) ?></span><?php endif; ?>
         </li>
         <?php endforeach; ?>
       </ul>
