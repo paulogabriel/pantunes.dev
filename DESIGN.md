@@ -33,7 +33,7 @@ Source of truth: `sass/_0.tokens.scss`. Use `var(--token)`; for transparency use
 
 Contrast: every text token (`white`, `ink`…`ink-muted`, `green`, `cyan`, `orange`, `pink`) must pass 4.5:1 on every background token. The matrix on `/design-system` is computed from the SCSS at build time; if you add a text or background token, add it to `DS_TEXT` / `DS_BG` in `templates/partials/tokens.php` and check the matrix. Text over gradients, video or images is not measured automatically: check it by hand.
 
-**Adding a token:** add it to `_0.tokens.scss` with a comment saying where it's used, list it in the right group in `templates/design-system.php`, and only then use it.
+**Adding a token:** add it to `_0.tokens.scss` with a comment saying where it's used (the comment is shown on `/design-system`), list it in the right group in `templates/design-system.php`, add the Portuguese version of the comment to `$notesPt` in the same file, and only then use it.
 
 ## Type
 
