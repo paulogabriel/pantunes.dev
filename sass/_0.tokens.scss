@@ -1,0 +1,154 @@
+// ── Design tokens, reset, base, typography, scroll container ──
+
+// Monokai palette
+:root {
+  // Accents
+  --accent:     #a6e22e;         // text, cursor, selection
+  --accent-btn: #66d9ef;         // CTA button — Monokai cyan
+  --accent-ink: #1a1a1a;
+
+  // Backgrounds
+  --bg-hero:    #272822;
+  --bg-about:   #20211b;
+  --bg-contact: #20211b;
+  --bg-card:    #31322b;
+  --bg-terminal:#1b1a17;
+
+  // Text
+  --white:      #fff;
+  --ink:        #f8f8f2;
+  --ink-2:      #cfcec3;
+  --ink-3:      #c9c8bd;
+  --ink-4:      #a8a99c;
+  --ink-muted:  #b1a993;  // passes AA (4.7:1+) even on the lightest card gradient
+
+  // Monokai named
+  --green:      #a6e22e;
+  --cyan:       #66d9ef;
+  --orange:     #fd971f;
+  --pink:       #ff6b9d;  // lightened from Monokai #f92672 to pass AA as text
+  --red:        #f92672;  // original Monokai pink: error rings and borders only, never text
+  --black:      #000;     // shadows, overlays and masks, mixed with transparent
+
+  // Hero
+  --bg-video:   #020205;  // behind the hero video while it loads
+
+  // Window chrome (terminal and message field)
+  --chrome-top:    #3a3833;
+  --chrome-bottom: #322f2a;
+  --chrome-title:  #b9b6a8;
+  --chrome-ink:    #d7d6cb;  // text inside terminal-style fields
+  --dot-close:     #ff5f57;
+  --dot-close-ink: #511a17;
+  --dot-min:       #febc2e;
+  --dot-max:       #28c840;
+
+  // Borders
+  --border:     #3a3b32;
+  --border-2:   #41423a;
+  --border-hov: #5a5b50;
+
+  // Typography
+  --font-sans:  'Space Grotesk', ui-sans-serif, sans-serif;
+  --font-hg:    'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:  'Space Mono', ui-monospace, monospace;
+
+  // Layout
+  --max-w:      1280px;
+  --px:         20px;
+
+  // Easing
+  --ease-out:   cubic-bezier(0.25, 1, 0.5, 1);
+
+  // z-index
+  --z-dots: 30;
+  --z-nav:   2;
+}
+
+// ── Reset ──
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: auto;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg-hero);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+::selection { background: var(--pink); color: var(--bg-hero); }
+
+// ── Scroll container ──
+#scroll-root {}
+
+main {
+  display: block;
+}
+
+// ── Utility classes ──
+.mono { font-family: var(--font-mono); }
+.hg   { font-family: var(--font-hg); }
+
+.accent { color: var(--accent); }
+
+.cursor {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--accent);
+  animation: blink 1.1s step-end infinite;
+  margin-left: 0.04em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// ── Skip link ──
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--bg-hero);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 0 0 6px 6px;
+  text-decoration: none;
+  transition: top 0.1s;
+
+  &:focus { top: 0; outline: 3px solid var(--green); outline-offset: -3px; }
+}
+
+// ── Global animations ──
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

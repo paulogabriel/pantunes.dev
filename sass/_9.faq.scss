@@ -1,0 +1,194 @@
+// ── FAQ ──
+
+.faq {
+  background: var(--bg-about);
+  border-top: 1px solid var(--border);
+  padding-block: clamp(50px, 10vw, 100px);
+}
+
+.faq-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--px);
+  display: grid;
+  grid-template-columns: .82fr 1.35fr;
+  gap: 80px;
+  align-items: start;
+
+  @media screen and (max-width: 860px) { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+
+.faq-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.faq-sub {
+  max-width: 40ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+// ── Items ──
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 56px;
+  padding: 16px 4px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  transition: color .15s;
+
+  &::-webkit-details-marker { display: none; }
+
+  // + / − marker drawn in CSS, not relying on the native arrow
+  &::after {
+    content: '';
+    flex: none;
+    width: 14px;
+    height: 14px;
+    background:
+      linear-gradient(currentColor, currentColor) center / 14px 2px no-repeat,
+      linear-gradient(currentColor, currentColor) center / 2px 14px no-repeat;
+    color: var(--green);
+    transition: transform .2s;
+  }
+
+  &:hover { color: var(--green); }
+  &:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 2px; }
+
+  .faq-item[open] > &::after {
+    background: linear-gradient(currentColor, currentColor) center / 14px 2px no-repeat;
+  }
+}
+
+.faq-a {
+  padding: 0 4px 24px;
+  max-width: 65ch;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+
+  a {
+    color: var(--cyan);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { color: var(--white); }
+    &:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 2px; }
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: .88em;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+}
+
+// ── Copyable prompt ──
+
+.faq-prompt {
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.faq-prompt-label {
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.faq-prompt-text {
+  width: 100%;
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--bg-terminal);
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  &:focus { outline: 2px solid var(--green); outline-offset: 2px; }
+}
+
+.faq-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  background: none;
+  border: 1px solid var(--border-hov);
+  border-radius: 3px;
+  color: var(--ink-2);
+  font-size: 13px;
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+
+  &:hover { color: var(--green); border-color: var(--green); }
+  &:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+  &[data-state="done"] { color: var(--green); border-color: var(--green); }
+}
+
+// ── Reveal (only when JS marks the section, so nothing disappears if the script fails) ──
+
+.faq.is-animated {
+  .faq-sub,
+  .faq-list {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .5s ease, transform .5s ease;
+
+    &.is-visible { opacity: 1; transform: translateY(0); }
+  }
+
+  .faq-list { transition-delay: .15s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-q, .faq-q::after { transition: none; }
+}
+
+// System high contrast (Windows): the marker uses the system text color
+@media (forced-colors: active) {
+  .faq-q::after { forced-color-adjust: none; color: CanvasText; }
+}

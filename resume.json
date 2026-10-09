@@ -1,0 +1,208 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Paulo Antunes",
+    "label": "Senior Front-End Developer · Web Accessibility",
+    "email": "paulo84@gmail.com",
+    "url": "https://pantunes.dev",
+    "summary": "20 years building and shipping web products for organizations around the world — most recently as a Senior Front-End Developer on enterprise platforms across government, nonprofit, and membership sectors. What I bring to a team isn't just code: it's years of translating what stakeholders actually need into something a team can build and ship. Hands-on focus: web accessibility (WCAG 2.2 AA, ADA, Section 508).",
+    "location": {
+      "city": "Porto Alegre",
+      "region": "RS",
+      "countryCode": "BR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "paulogabriel",
+        "url": "https://www.linkedin.com/in/paulogabriel"
+      },
+      {
+        "network": "GitHub",
+        "username": "paulogabriel",
+        "url": "https://github.com/paulogabriel"
+      },
+      {
+        "network": "Behance",
+        "username": "paulogabriel",
+        "url": "https://behance.net/paulogabriel"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelance",
+      "position": "Front-End Developer & UX/UI Designer",
+      "startDate": "2006-01-01",
+      "summary": "Web development and digital strategy for my own clients, alongside agency and in-house roles. Contracts and invoices go through my Brazilian company.",
+      "highlights": [
+        "End-to-end projects for direct clients in Brazil and abroad: UX/UI design, front-end and CMS builds, from concept to deploy.",
+        "Logo design for small businesses, carried into their websites and newsletters.",
+        "Selected client work: behance.net/paulogabriel"
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Taoti Creative",
+      "position": "Senior Front-End Developer",
+      "url": "https://taoti.com",
+      "startDate": "2018-01-03",
+      "endDate": "2026-06-12",
+      "summary": "Worked on enterprise Drupal and WordPress sites for government, nonprofit, and membership organizations. Led web accessibility auditing and remediation (WCAG 2.2 AA, ADA, Section 508). Integrated AI tools into daily front-end workflows via Figma MCP integration.",
+      "highlights": [
+        "Front-end developer on multiple enterprise Drupal and WordPress builds for government, nonprofit and membership organizations.",
+        "Focused on web accessibility auditing and remediation, helping clients meet WCAG 2.2 AA, ADA and Section 508 so their sites work for everyone, including people who rely on assistive technologies.",
+        "Built responsive, component-based interfaces with HTML5, CSS3 and JavaScript, Twig templates, Tailwind CSS, Lando environments and Git — maintaining long-term client sites through modular, maintainable code.",
+        "Integrated AI tools into daily front-end work: migrated legacy ACF field groups to native Gutenberg blocks, turned Figma specs into code through Figma's MCP integration, reused existing component patterns, debugged complex issues and extended search filtering.",
+        "Authored build specifications that scoped the technical approach for new projects and guided estimation.",
+        "Performed QA across the team's work: verified completed tasks, validated client sites after security updates and checked builds against requirements before release."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Crossover",
+      "position": "Visual Design Engineer",
+      "url": "https://crossover.com",
+      "startDate": "2017-07-01",
+      "endDate": "2017-12-31",
+      "summary": "Contributed to Acquia client project. Owned SCSS / styling architecture for the Kitewheel MVP through to launch.",
+      "location": "Remote",
+      "highlights": [
+        "Contributed to a client project for Acquia, the company behind Drupal, as part of Crossover's global talent network.",
+        "Owned the SCSS / styling architecture for the Kitewheel MVP, taking it through to launch."
+      ]
+    },
+    {
+      "name": "Printi",
+      "position": "UX/UI Designer & Front-End Developer",
+      "url": "https://printi.com.br",
+      "startDate": "2012-09-01",
+      "endDate": "2016-03-01",
+      "summary": "Early team member. Designed UX/UI for new features and translated layouts into front-end code during Printi's growth period (Best B2B Company by Brazil Founders, 2014 & 2015).",
+      "location": "Remote",
+      "highlights": [
+        "Early team member, working directly with product management to design and ship new pages and services.",
+        "Designed UX/UI for new features and built them as front-end pages for the back-end team to integrate.",
+        "Contributed during a period of rapid growth in which Printi was named Best B2B Company by Brazil Founders (2014 and 2015)."
+      ]
+    },
+    {
+      "name": "Abduzeedo",
+      "position": "Writer",
+      "url": "https://abduzeedo.com",
+      "startDate": "2008-01-01",
+      "endDate": "2019-12-31",
+      "summary": "Contributed to one of the world's most recognized design blogs — inspiration pieces, ideas, and interviews for the global design community.",
+      "location": "Remote",
+      "highlights": [
+        "Wrote for one of the world's most recognized design blogs, online since 2007: inspiration pieces, ideas and interviews for the global design community."
+      ]
+    },
+    {
+      "name": "Zee Design",
+      "position": "UX/UI Designer & Front-End Developer",
+      "url": "https://zee.com.br",
+      "startDate": "2006-01-01",
+      "endDate": "2012-08-31",
+      "summary": "Delivered full design solutions for a range of clients — UX/UI, responsive design, front-end development, wireframes, prototypes, and style guides.",
+      "location": "Porto Alegre, Brazil",
+      "highlights": [
+        "Delivered full design solutions for a range of clients, from UX/UI and responsive design through front-end development.",
+        "Translated design concepts into responsive implementations; produced wireframes, prototypes and style guides."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Federal University of Rio Grande do Sul",
+      "area": "Social Communications — Publicity & Advertising",
+      "studyType": "B.A.",
+      "url": "https://ufrgs.br",
+      "endDate": "2012-12-31"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML + CSS",
+      "level": "Expert",
+      "keywords": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "Tailwind CSS",
+        "responsive design"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": [
+        "ES6+",
+        "jQuery",
+        "Vanilla JS"
+      ]
+    },
+    {
+      "name": "Web Accessibility",
+      "level": "Expert",
+      "keywords": [
+        "WCAG 2.2 AA",
+        "ADA",
+        "Section 508",
+        "axe",
+        "WAVE",
+        "PowerMapper",
+        "Lighthouse",
+        "NVDA",
+        "VoiceOver"
+      ]
+    },
+    {
+      "name": "CMS",
+      "level": "Expert",
+      "keywords": [
+        "Drupal",
+        "WordPress",
+        "Twig"
+      ]
+    },
+    {
+      "name": "UX / UI Design",
+      "level": "Advanced",
+      "keywords": [
+        "Figma",
+        "Adobe XD",
+        "wireframes",
+        "style guides",
+        "component-based design"
+      ]
+    },
+    {
+      "name": "Tooling",
+      "level": "Advanced",
+      "keywords": [
+        "Git",
+        "SVN",
+        "Gulp",
+        "PHP",
+        "Lando",
+        "Webpack"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Portuguese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "meta": {
+    "canonical": "https://pantunes.dev/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-09-28"
+  }
+}

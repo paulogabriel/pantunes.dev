@@ -1,0 +1,418 @@
+// ── Contact ──
+
+.contact {
+  background: var(--bg-contact);
+  border-top: 1px solid var(--border);
+}
+
+.contact-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: var(--px);
+  padding-block: 80px;
+  width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 72px;
+  align-items: start;
+
+  @media screen and (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.contact-header {
+  margin-bottom: 0;
+}
+
+.contact-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 2.625rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.contact-sub {
+  font-size: 15px;
+  color: var(--ink-4);
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .5s ease, transform .5s ease;
+
+  &.is-visible { opacity: 1; transform: translateY(0); }
+}
+
+// ── Form card ──
+
+.contact-card {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+
+  &.is-visible { opacity: 1; transform: translateY(0); }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  @media screen and (max-width: 480px) { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--ink-muted);
+}
+
+.required-mark {
+  color: var(--pink);
+}
+
+// Explains the * once, right below the last field (WCAG 3.3.2)
+.form-legend {
+  margin-top: -8px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--ink-muted);
+}
+
+// Text fields
+.form-group input,
+.form-group textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  border-radius: 3px;
+  color: var(--ink);
+  font-family: var(--font-hg);
+  font-size: 14px;
+  outline: none;
+  padding: 12px 14px;
+  transition: border-color .15s, box-shadow .15s;
+  width: 100%;
+  min-height: 44px;
+
+  &::placeholder { color: var(--ink-muted); }
+  &:hover  { border-color: var(--border-hov); }
+  &:focus  { border-color: var(--green); box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 12%, transparent); }
+
+  &[aria-invalid='true'] {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--red) 45%, transparent);
+  }
+}
+
+// ── Contact photos ──
+
+.contact-photos {
+  display: flex;
+  gap: 6px;
+  margin-top: 22px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.contact-photo {
+  max-height: 120px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(10px) scale(.96);
+  transition: opacity .4s ease, transform .4s ease;
+
+  @media screen and (max-width: 400px) {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  &.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+// ── Textarea ──
+.form-group textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+// ── Terminal (message field) — kept for compatibility ──
+
+.terminal-window {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--black);
+  border-bottom: none;
+  box-shadow: 0 12px 34px color-mix(in srgb, var(--black) 40%, transparent);
+}
+
+.terminal-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 9px 13px;
+  background: linear-gradient(var(--chrome-top), var(--chrome-bottom));
+  border-bottom: 1px solid var(--black);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.t-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+
+  &--red    {
+    background: var(--dot-close);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background: var(--dot-close-ink);
+    }
+  }
+  &--yellow { background: var(--dot-min); }
+  &--green  { background: var(--dot-max); }
+}
+
+.terminal-title {
+  position: absolute;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--chrome-title);
+  pointer-events: none;
+}
+
+.terminal-body {
+  display: block;
+  width: 100%;
+  margin-top: -8px;
+  min-height: 118px;
+  background: var(--bg-terminal);
+  border: 1px solid var(--black);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 15px 17px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--chrome-ink);
+  outline: none;
+  resize: vertical;
+  transition: border-color .2s;
+
+  &::placeholder { color: var(--ink-muted); }
+  &:focus-visible { border-color: var(--cyan); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 45%, transparent); }
+
+  &[aria-invalid='true'] {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--red) 45%, transparent);
+  }
+}
+
+// When the terminal has focus, highlight its chrome too
+.terminal-body:focus ~ .terminal-window .terminal-bar,
+.form-group:focus-within .terminal-window {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 12%, transparent);
+}
+
+// ── Field errors ──
+
+.field-hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--pink);
+  line-height: 1.4;
+}
+
+.form-success {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--green);
+  background: color-mix(in srgb, var(--green) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
+  border-radius: 9px;
+  padding: 24px;
+}
+
+.form-error {
+  font-size: 0.875rem;
+  color: var(--pink);
+  background: color-mix(in srgb, var(--red) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--red) 20%, transparent);
+  border-radius: 7px;
+  padding: 10px 14px;
+}
+
+// ── Submit button ──
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 28px;
+  background: var(--accent);
+  color: var(--bg-hero);
+  border: none;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+  width: 100%;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--green) 20%, transparent);
+  transition: transform .18s var(--ease-out), box-shadow .18s var(--ease-out);
+
+  &:hover { transform: translateY(-2px); box-shadow: 0 8px 32px color-mix(in srgb, var(--green) 28%, transparent); }
+  &:active { transform: scale(.98); }
+  &:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+  &:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+}
+
+// ── CONNECT divider ──
+
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 26px 0 16px;
+  opacity: 0;
+  transition: opacity .4s ease;
+
+  &.is-visible { opacity: 1; }
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider-label {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--ink-muted);
+}
+
+// ── Social links ──
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  min-width: 44px;
+  min-height: 44px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .35s ease, transform .35s ease, color .35s ease;
+
+  &.is-visible         { opacity: 1; transform: translateY(0); }
+  &.is-visible:hover   {
+    color: var(--white);
+  }
+  &:focus-visible      { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 4px; }
+}
+
+// ── Site footer ──
+
+.site-footer {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: .05em;
+  border-top: 1px solid transparent;
+  background:
+    linear-gradient(var(--bg-contact), var(--bg-contact)) padding-box,
+    linear-gradient(to right, transparent, color-mix(in srgb, var(--green) 40%, var(--border)), transparent) border-box;
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: 22px var(--px);
+  width: 100%;
+
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.contact-footer {
+  font-size: 11px;
+  color: var(--ink-muted);
+  opacity: 0;
+  transition: opacity .4s ease;
+
+  &.is-visible { opacity: 1; }
+
+  a {
+    color: var(--cyan);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { color: var(--white); }
+    &:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 2px; }
+  }
+}
+
+// ── Honeypot ──
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

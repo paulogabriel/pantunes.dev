@@ -1,0 +1,163 @@
+// ── Modal Terminal ──
+
+.modal-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: color-mix(in srgb, var(--bg-terminal) 85%, transparent);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  // visibility keeps the closed terminal out of the tab order and the accessibility tree
+  visibility: hidden;
+  transition: opacity .22s, visibility 0s linear .22s;
+
+  &.open { opacity: 1; pointer-events: auto; visibility: visible; transition-delay: 0s; }
+
+  &.minimized {
+    background: transparent;
+    backdrop-filter: none;
+    pointer-events: none;
+    align-items: flex-end;
+    justify-content: center;
+
+    .modal-box {
+      pointer-events: auto;
+      width: 320px;
+      transform: translateY(0) scale(1);
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -4px 24px color-mix(in srgb, var(--black) 50%, transparent);
+    }
+
+    .sh-body,
+    .sh-p { display: none; }
+  }
+
+  &.maximized .modal-box { width: min(96vw, 1100px); }
+  &.maximized .sh-body   { height: calc(85vh - 90px); }
+}
+
+.modal-box {
+  width: min(680px, 92vw);
+  background: var(--bg-about);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px color-mix(in srgb, var(--black) 70%, transparent), 0 0 0 .5px color-mix(in srgb, var(--green) 10%, transparent);
+  transform: translateY(16px) scale(.97);
+  transition: transform .22s;
+
+  .modal-ov.open & { transform: translateY(0) scale(1); }
+}
+
+// ── Shell bar ──
+
+.sh-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  background: linear-gradient(var(--chrome-top), var(--chrome-bottom));
+  border-bottom: 1px solid var(--black);
+}
+
+.sh-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    transition: color .12s;
+  }
+
+  &--close { background: var(--dot-close); &::after { content: '×'; } }
+  &--min   { background: var(--dot-min); &::after { content: '−'; } }
+  &--max   { background: var(--dot-max); &::after { content: '⊕'; } }
+
+  &:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 50%; }
+}
+
+.sh-bar:hover .sh-btn::after { color: color-mix(in srgb, var(--black) 55%, transparent); }
+
+.sh-title {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--chrome-title);
+  letter-spacing: .04em;
+}
+
+// ── Shell body ──
+
+.sh-body {
+  height: 340px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  background: var(--bg-terminal);
+  scroll-behavior: smooth;
+
+  &:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
+
+  &::-webkit-scrollbar { width: 3px; }
+  &::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+}
+
+.sh-line { display: block; color: var(--ink-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.sh-g    { color: var(--green); }
+.sh-c    { color: var(--cyan); }
+.sh-o    { color: var(--orange); }
+.sh-d    { color: var(--ink-muted); }
+.sh-w    { color: var(--ink); }
+
+.sh-p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px 12px;
+  background: var(--bg-terminal);
+  border-top: 1px solid var(--border);
+
+  // The input has no outline of its own: with the keyboard, the prompt row shows focus (WCAG 2.4.7).
+  // Text inputs always match :focus-visible, so the modality comes from main.js.
+  .kbd-nav &:focus-within { outline: 2px solid var(--green); outline-offset: -2px; }
+}
+
+.sh-sym {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.sh-in {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--ink);
+  caret-color: var(--green);
+
+  &::placeholder { color: var(--ink-muted); }
+}
