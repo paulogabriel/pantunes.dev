@@ -306,16 +306,15 @@ $toc = [
               <div class="skill-desc hg"><?= $L('Reports free of false-positive noise, prioritised by real impact.', 'Relatórios sem ruído de falso positivo, priorizados por impacto real.') ?></div>
             </div>
           </li>
-          <li class="client-card is-own">
-            <a href="https://sbar.com.br/" target="_blank" rel="noopener" aria-label="SBAR — <?= $L('direct client', 'cliente direto') ?> (<?= $L('opens in new tab', 'abre em nova aba') ?>)">
+          <li class="client-card">
+            <a href="https://sbar.com.br/" target="_blank" rel="noopener" aria-label="SBAR (<?= $L('opens in new tab', 'abre em nova aba') ?>)">
               <span class="client-domain mono">sbar.com.br</span>
               <span class="client-name">SBAR</span>
               <span class="client-roles"><span class="client-role mono"><?= $L('concept → deploy', 'conceito → deploy') ?></span></span>
-              <span class="client-origin mono"><?= $L('direct client', 'cliente direto') ?></span>
             </a>
           </li>
         </ul>
-        <p class="ds-caption mono"><code>.skill-card</code> · <code>.client-card.is-own</code> — <?= $L('origin is stated in text, not only color', 'a origem aparece em texto, não só pela cor') ?></p>
+        <p class="ds-caption mono"><code>.skill-card</code> · <code>.client-card</code></p>
       </div>
 
       <h3 class="ds-h3"><?= $L('Terminal', 'Terminal') ?></h3>

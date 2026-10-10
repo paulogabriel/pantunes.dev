@@ -62,7 +62,7 @@ Live examples: `/design-system#ds-components`.
 - **Links**: underlined or clearly distinguished by more than color. External links say "(opens in new tab)" in their accessible name.
 - **Accessible names**: when a control has an `aria-label`, it must contain the visible text (WCAG 2.5.3). `>help` → `help: open interactive terminal`; `PT` → `PT, versão em português`.
 - **Form fields** (`.form-group`): a visible `<label for>`; errors set `aria-invalid="true"`, point to a hint with `aria-describedby` and are announced with `role="alert"` on submit. Required fields use the `required` attribute; the `*` in labels is `aria-hidden`, and a "* required" legend below the last field explains it.
-- **Cards** (`.skill-card`, `.client-card`): list items. Card origin ("direct client") is written, never color-only.
+- **Cards** (`.skill-card`, `.client-card`): list items. Nothing on a card is conveyed by color alone.
 - **Work band** (`.clients`): moves on its own, so it has a pause button (2.2.2), stops and scrolls a focused card into view (2.4.11), and stays still without JS.
 - **FAQ**: `<details>`/`<summary>`; the `+`/`−` marker is CSS and survives Windows high contrast.
 - **Terminal modal**: `role="dialog"`, `aria-modal`, focus moves in and returns on close, Esc closes. Output is inserted with `textContent`, never as HTML. The input's focus ring shows only in keyboard mode (`.kbd-nav`).
