@@ -4,7 +4,6 @@ $pt = ($clients_lang ?? 'en') === 'pt';
 
 $t = [
   'title'  => $pt ? 'Trabalhos selecionados' : 'Selected work',
-  'own'    => $pt ? 'cliente direto' : 'direct client',
   'full'   => $pt ? 'conceito → deploy' : 'concept → deploy',
   'newtab' => $pt ? 'abre em nova aba' : 'opens in new tab',
   'aria'   => $pt ? 'Lista de sites de clientes' : 'Client sites list',
@@ -34,9 +33,6 @@ foreach ([0, 1] as $set) foreach ($copy as $i => $c) $items[] = [$c, $set > 0 ||
   <div class="clients-head">
     <h2 class="clients-title" id="clients-title" aria-label="<?= $t['title'] ?>"><?= $t['title'] ?><span class="cursor" aria-hidden="true">|</span></h2>
     <div class="clients-controls">
-      <p class="clients-legend mono">
-        <span class="is-own"><?= $t['own'] ?></span>
-      </p>
       <button class="clients-toggle mono" type="button" hidden
               data-state="playing"
               data-pause="<?= $t['pause'] ?>" data-play="<?= $t['play'] ?>"
@@ -51,15 +47,14 @@ foreach ([0, 1] as $set) foreach ($copy as $i => $c) $items[] = [$c, $set > 0 ||
   <div class="clients-viewport" role="region" aria-label="<?= $t['aria'] ?>">
     <ul class="clients-track">
       <?php foreach ($items as [$c, $dup]): ?>
-      <li class="client-card is-own"<?= $dup ? ' aria-hidden="true"' : '' ?>>
+      <li class="client-card"<?= $dup ? ' aria-hidden="true"' : '' ?>>
         <a href="https://<?= $c['domain'] ?>/" target="_blank" rel="noopener"<?= $dup ? ' tabindex="-1"' : '' ?>
-           aria-label="<?= htmlspecialchars($c['name']) ?> — <?= $t['own'] ?> (<?= $t['newtab'] ?>)">
+           aria-label="<?= htmlspecialchars($c['name']) ?> (<?= $t['newtab'] ?>)">
           <span class="client-domain mono"><?= $c['domain'] ?></span>
           <span class="client-name"><?= htmlspecialchars($c['name']) ?></span>
           <span class="client-roles">
             <?php foreach ($c['roles'] as $r): ?><span class="client-role mono"><?= $r ?></span><?php endforeach; ?>
           </span>
-          <span class="client-origin mono"><?= $t['own'] ?></span>
         </a>
       </li>
       <?php endforeach; ?>
