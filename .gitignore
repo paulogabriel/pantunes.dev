@@ -7,3 +7,5 @@ PRODUCT.md
 config/mail.php
 public/
 vendor/
+# Local-only resume in Portuguese, never published
+cv.pdf
