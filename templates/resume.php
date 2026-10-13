@@ -62,7 +62,7 @@ $profiles = array_filter($b['profiles'] ?? [], fn($p) => in_array($p['network'],
 @font-face { font-family: 'Hanken Grotesk'; font-weight: 400; font-display: swap; src: url('/fonts/hanken-grotesk/hanken-grotesk-v12-latin-regular.woff2') format('woff2'); }
 @font-face { font-family: 'Hanken Grotesk'; font-weight: 600; font-display: swap; src: url('/fonts/hanken-grotesk/hanken-grotesk-v12-latin-600.woff2') format('woff2'); }
 
-@page { size: Letter; margin: 0.55in 0.6in; }
+@page { size: Letter; margin: 0.5in 0.6in; }
 
 :root {
   --paper: #ffffff;
@@ -142,6 +142,9 @@ h3 { font-size: 11pt; font-weight: 700; }
 .job li::marker { color: var(--muted); }
 
 @media print {
+  body { line-height: 1.42; }
+  section { margin-top: 13px; }
+  .job + .job { margin-top: 9px; }
   html { background: none; }
   .toolbar { display: none; }
   .paper { max-width: none; margin: 0; padding: 0; border-radius: 0; }
