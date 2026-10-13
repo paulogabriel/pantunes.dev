@@ -303,7 +303,7 @@ $toc = [
             <span class="skill-num mono" aria-hidden="true">08</span>
             <div>
               <div class="skill-name">A11y auditing</div>
-              <div class="skill-desc hg"><?= $L('Reports free of false-positive noise, prioritised by real impact.', 'Relatórios sem ruído de falso positivo, priorizados por impacto real.') ?></div>
+              <div class="skill-desc hg"><?= $L('axe-core and Playwright for the automated part, screen readers for the rest. Reports prioritised by real impact.', 'axe-core e Playwright na parte automática, leitores de tela no resto. Relatórios priorizados pelo impacto real.') ?></div>
             </div>
           </li>
           <li class="client-card">

@@ -63,8 +63,8 @@
         <li class="skill-card" data-n="03">
           <span class="skill-num mono" aria-hidden="true">03</span>
           <div>
-            <div class="skill-name">CMS Engineering</div>
-            <div class="skill-desc hg">WordPress for rapid growth. Drupal for enterprise-grade security.</div>
+            <div class="skill-name">Engenharia de CMS</div>
+            <div class="skill-desc hg">WordPress para crescer rápido. Drupal para segurança de nível enterprise.</div>
           </div>
         </li>
         <li class="skill-card" data-n="04">
@@ -77,8 +77,8 @@
         <li class="skill-card" data-n="05">
           <span class="skill-num mono" aria-hidden="true">05</span>
           <div>
-            <div class="skill-name">Escopo mutável</div>
-            <div class="skill-desc hg">Confortável com mudança de direção sem perder o ritmo de entrega.</div>
+            <div class="skill-name">IA com revisão humana</div>
+            <div class="skill-desc hg">Cursor, Copilot e Claude Code para ganhar velocidade, seguindo os padrões do projeto e com revisão manual.</div>
           </div>
         </li>
         <li class="skill-card" data-n="06">
@@ -99,7 +99,7 @@
           <span class="skill-num mono" aria-hidden="true">08</span>
           <div>
             <div class="skill-name">Auditoria a11y</div>
-            <div class="skill-desc hg">Relatórios sem ruído de falso positivo, com prioridade de impacto real.</div>
+            <div class="skill-desc hg">axe-core e Playwright na parte automática, leitores de tela no resto. Relatórios priorizados pelo impacto real.</div>
           </div>
         </li>
       </ul>

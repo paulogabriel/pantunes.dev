@@ -77,8 +77,8 @@
         <li class="skill-card" data-n="05">
           <span class="skill-num mono" aria-hidden="true">05</span>
           <div>
-            <div class="skill-name">Fluid scope</div>
-            <div class="skill-desc hg">Comfortable with direction changes without losing delivery momentum.</div>
+            <div class="skill-name">AI-assisted, human-checked</div>
+            <div class="skill-desc hg">Cursor, Copilot and Claude Code to move faster, grounded in the codebase's own patterns and reviewed by hand.</div>
           </div>
         </li>
         <li class="skill-card" data-n="06">
@@ -99,7 +99,7 @@
           <span class="skill-num mono" aria-hidden="true">08</span>
           <div>
             <div class="skill-name">A11y auditing</div>
-            <div class="skill-desc hg">Reports free of false-positive noise, prioritised by real impact.</div>
+            <div class="skill-desc hg">axe-core and Playwright for the automated part, screen readers for the rest. Reports prioritised by real impact.</div>
           </div>
         </li>
       </ul>
